@@ -7,3 +7,8 @@
  
  Current factory configuration can be found here:
  http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Developers/Factory#factory-south-ubuntu.kitware
+
+ Usage:
+ Clone repository to local machine (or virtual machine)
+ In cloned repository, make shell scripts executable: chmod +x *.sh
+ Run scripts.
