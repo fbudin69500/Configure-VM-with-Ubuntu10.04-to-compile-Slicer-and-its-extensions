@@ -8,11 +8,13 @@ then
 fi
 cwd=`pwd` &&
 cd ~/Slicer &&
+rm -rf ~/Slicer/ExtensionsIndex*
 git clone https://github.com/Slicer/ExtensionsIndex.git &&
-mkdir ExtensionIndex-build &&
-cd ExtensionIndex-build &&
+mkdir ExtensionsIndex-build &&
+cd ExtensionsIndex-build &&
 ~/Support/cmake-3.3.2/bin/cmake \
 -DSlicer_DIR:PATH=~/Slicer/Slicer-trunk-build/Slicer-build \
--DSlicer_EXTENSION_DESCRIPTION_DIR:PATH=../ExtensionIndex \
+-DSlicer_EXTENSION_DESCRIPTION_DIR:PATH=~/Slicer/ExtensionsIndex \
 -DCMAKE_BUILD_TYPE:STRING=Release \
-~/Slicer/Slicer-trunk/Extensions/CMake &&
+~/Slicer/Slicer-trunk/Extensions/CMake
+
